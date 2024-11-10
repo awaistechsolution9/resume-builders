@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #090909 0%, #141e30 50%, #243b55 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    animation: backgroundAnimation 10s infinite linear;
+}
+
+
+h1 {
+    text-align: center;
+    color: #00e5ff;
+    font-size: 46px; 
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    text-decoration: underline;
+    text-decoration-color: #f39c12;
+    text-decoration-thickness: 4px; 
+    animation: headerAnimation 2s ease-out infinite alternate;
+}
+
+@keyframes headerAnimation {
+    0% {
+        opacity: 0.8;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for Header Animation */
+@keyframes headerAnimation {
+    0% {
+        opacity: 0.8;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Container */
+form {
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    margin-left: 370px;
+    opacity: 0;
+    animation: formAnimation 2s ease-out forwards;
+}
+
+/* Keyframe for Form Fade-in Animation */
+@keyframes formAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fieldset Styling */
+fieldset {
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.08); 
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Fieldset Hover Effect */
+fieldset:hover,
+fieldset:focus-within {
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.6); 
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #f39c12; 
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-size: 16px;
+    color: #d1d1d1;
+    margin-bottom: 5px;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: labelAnimation 1s ease-out 0.5s forwards;
+    font-family: "poppins",sans-serif;
+    font-weight: 600;
+}
+
+@keyframes labelAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.4s ease;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    animation: inputAnimation 1.2s ease-out forwards;
+}
+
+/* Keyframe for Input Field Fade-in Animation */
+@keyframes inputAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Textarea Styling */
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 50%, #ff416c 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 10px 20px rgba(102, 51, 153, 0.5);
+    opacity: 0;
+    animation: buttonAnimation 1.5s ease-out forwards;
+}
+
+/* Keyframe for Button Fade-in Animation */
+@keyframes buttonAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 500px) {
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f39c12;
+    background-color: rgba(0, 0, 0, 0.2); 
+    padding: 5px 15px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    display: inline-block;
+}
+
+#resumeOutput{
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid #f39c12;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #090909 0%, #141e30 50%, #243b55 100%);
+}
+#resumeOutput{
+    background: rgba(255, 255, 255, 0.07);
+    background: linear-gradient(135deg, #090909 0%, #141e30 50%, #243b55 100%);
+
+}
